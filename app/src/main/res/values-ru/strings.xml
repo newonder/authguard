@@ -2,8 +2,8 @@
 <resources>
     <string name="settings_title_main">Настройки</string>
     <string name="app_logo_content_description">Иконка приложения</string>
-    <string name="welcome">Добро пожаловать в AuthGuard!</string>
-    <string name="welcome_description">Сохраняйте доступ ко всем своим аккаунтам даже после смены устройства</string>
+    <string name="welcome">Добро пожаловать в %s!</string>
+    <string name="welcome_description">Сохраняйте доступ ко всем своим аккаунтам</string>
     <string name="login">Войти / Зарегистрироваться</string>
     <string name="local_mode">Продолжить локально</string>
     <string name="confirm_action">Подтвердите действие</string>
@@ -42,4 +42,5 @@
     <string name="delete_passcode">Удалить код-пароль</string>
     <string name="caution">Предупреждение</string>
     <string name="settings_changelog">История изменений</string>
+    <string name="start">Приступить</string>
 </resources>

@@ -55,7 +55,7 @@ private fun WelcomeScreenView(
                 .padding(PaddingValues(horizontal = 16.dp))
         ) {
             Text(
-                text = stringResource(id = R.string.welcome),
+                text = String.format(stringResource(id = R.string.welcome), stringResource(id = R.string.app_name)),
                 modifier = Modifier.fillMaxWidth(),
                 fontSize = 28.sp,
                 textAlign = TextAlign.Center,
@@ -83,18 +83,17 @@ private fun WelcomeScreenView(
             verticalArrangement = Arrangement.Center
         ) {
             Button(
-                onClick = {
-
-                }, colors = ButtonDefaults.buttonColors(
+                onClick = onStartLocal,
+                colors = ButtonDefaults.buttonColors(
                     containerColor = MaterialTheme.colorScheme.primary,
                     contentColor = MaterialTheme.colorScheme.onPrimary
                 )
             ) {
-                Text(text = stringResource(id = R.string.login))
+                Text(text = stringResource(id = R.string.start))
             }
-            TextButton(onClick = onStartLocal) {
-                Text(text = stringResource(id = R.string.local_mode))
-            }
+//            TextButton(onClick = onStartLocal) {
+//                Text(text = stringResource(id = R.string.local_mode))
+//            }
         }
 
     }

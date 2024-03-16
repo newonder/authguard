@@ -17,21 +17,21 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.dagger)
-    id("dev.zabolotskikh.changelog-gradle-plugin")
+//    id("dev.zabolotskikh.changelog-gradle-plugin")
 }
 
-changelog {
-    repositoryName = "authguard"
-    repositoryOwner = "kanefron5"
-    filePath = "${projectDir}/src/main/assets/$changelogFileName"
-}
+//changelog {
+//    repositoryName = "authguard"
+//    repositoryOwner = "kanefron5"
+//    filePath = "${projectDir}/src/main/assets/$changelogFileName"
+//}
 
 android {
     namespace = "dev.zabolotskikh.authguard"
     compileSdk = appCompileSdk.toInt()
 
     defaultConfig {
-        applicationId = "dev.zabolotskikh.authguard"
+        applicationId = "dev.zabolotskikh.otpgen"
         minSdk = appMinSdk.toInt()
         targetSdk = appTargetSdk.toInt()
         versionCode = appVersionCode
@@ -155,10 +155,10 @@ dependencies {
     testImplementation(libs.kotlinx.coroutines.test)
 }
 
-// Generate changelog file before realising a new apk
-tasks.whenTaskAdded {
-    if (arrayOf("assembleRelease", "bundleRelease").contains(name)) {
-        dependsOn(tasks.getByName("generateChangelog"))
-    }
-}
+//// Generate changelog file before realising a new apk
+//tasks.whenTaskAdded {
+//    if (arrayOf("assembleRelease", "bundleRelease").contains(name)) {
+//        dependsOn(tasks.getByName("generateChangelog"))
+//    }
+//}
 
